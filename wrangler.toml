@@ -1,0 +1,23 @@
+name = "brain-dump"
+main = "src/worker/index.ts"
+compatibility_date = "2026-04-01"
+assets = { directory = "./dist" }
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "brain-dump-db"
+database_id = "YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "AUDIO_BUCKET"
+bucket_name = "brain-dump-audio"
+
+# Optional: custom domain (uncomment and edit if you have a domain on Cloudflare)
+# [[routes]]
+# pattern = "voice.yourdomain.com/*"
+# zone_name = "yourdomain.com"
+
+[ai]
+binding = "AI"

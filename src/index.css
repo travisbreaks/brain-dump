@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+:root {
+  --color-bg: #daeaf5;
+  --color-surface: #ffffff;
+  --color-surface-hover: #edf4f9;
+  --color-border: #b8d4e8;
+  --color-text: #2c3e50;
+  --color-text-muted: #6b8299;
+  --color-accent: #d4847a;
+  --color-accent-glow: rgba(212, 132, 122, 0.35);
+  --color-success: #22c55e;
+  --color-warning: #d4a017;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 16px var(--color-accent-glow); transform: scale(1); }
+  50% { box-shadow: 0 6px 24px var(--color-accent-glow); transform: scale(1.03); }
+}
+
+/* Safe area padding for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
